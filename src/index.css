@@ -1,0 +1,242 @@
+:root {
+    --font-color: black;
+    --bg-color: white;
+    --nav-color: white;
+    --shadow-color: 1px 2px 4px 0px #ece7e7;
+    --border-color: 2px solid #ece7e7;
+}
+
+[data-theme="dark"] {
+    --font-color: white;
+    --bg-color:hsl(205, 25%, 17%);
+    --nav-color: hsl(210, 22%, 22%);
+    --shadow-color: none;
+    --border-color: 2px solid transparent;
+}
+
+@media only screen and (max-width:700px){
+    #Bar{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    #country_details{
+        text-align: center;
+        font-size: 18px !important;
+    }
+    #Bell{
+        display: block !important;
+    }
+    #country{
+        width: 86% !important;
+        margin-bottom: 0px !important;
+    }
+    #country_icon{
+        width: auto !important;
+        height: 200px !important;
+    }
+    #country_name{
+        font-size: 21px;
+    }
+    #search{
+        margin: 0px auto !important;
+        width: 88% !important;
+    }
+    #count_search{
+        height: 55px !important;
+        width: 85% !important;
+        display: block;
+        margin: 0px auto;
+        font-size: 16px;
+    }
+    #filter{ 
+       margin-top: 25px;
+       font-size: 16px !important;
+       width: 230px !important;
+       margin-right: 0px !important;
+       margin-left: 6% !important;
+    }
+    #filter p{
+        padding: 9px;
+        padding-left: 20px;
+    }
+    #filter_results_box{
+        width: 229px !important;
+        margin-top: 65px !important;
+    }
+    #drop_down{
+        height: 60px !important;
+    }
+    #search_icon{
+        height: 58px !important;
+    }
+}
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+
+body{
+	margin: 0px;
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+#Bar{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	display: flex;
+    flex-wrap: wrap;
+    background: var(--nav-color);
+    box-shadow: var(--shadow-color);
+    border: var(--border-color);
+    border-top: 0px;
+    border-left: 0px;
+    border-radius: 0px;
+}
+#where{
+	margin-left: 5%;
+	padding: 3px;
+	font-weight: bold;
+}
+#mode{
+	margin-left: auto;
+	margin-right: 5%;
+	padding: 3px;
+	display: flex;
+}
+#mode_icon{
+	height: 20px;
+    width: 30px;
+    background-position: center;
+    background-image: url(./icons/moon-svgrepo-com.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+}
+#Bell{
+	display: flex;
+	margin-top: 15px;
+}
+#search{
+    display: flex;
+    width: 25%;
+    margin-left: 15px;
+    box-shadow: var(--shadow-color);
+    border: var(--border-color);
+    background: white;
+    border-radius: 7px;  
+}
+#count_search{
+	height: 37px;
+    width: 90%;
+    border: 0px;
+    border-radius: 6px;
+    text-align: left;
+}
+#filter{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+	box-shadow: var(--shadow-color);
+    border: var(--border-color);
+	margin-left: auto;
+	margin-right: 10%;
+	width: 165px;
+	border-radius: 5px;
+	font-size: 14px;
+}
+#filter_results_box{
+	position: absolute;
+    width: 163px;
+    box-shadow: var(--shadow-color);
+    border: var(--border-color);
+    border-radius: 7px;
+    background-color: white;
+    color: black;
+    margin-top: 40px;
+}
+#filter_results_box p{
+	padding-left: 15px;
+}
+#filter_p{
+	margin-top: 10px;
+	padding-left: 15px;
+}
+#BarBell{
+	display: flex;
+    flex-wrap: wrap;
+	/*padding: 20px;
+	padding-left: 60px;*/
+}
+#country{
+	width: 179px;
+    box-shadow: var(--shadow-color);
+    border: var(--border-color);
+    border-radius: 6px;
+    margin: 20px;
+}
+#country_icon{
+    height: 95px;
+    width: 179px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: initial;
+    border-radius: 5px;
+}
+#country_name{
+	font-weight: 600;
+}
+#country_details{
+	font-size: 14px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+#drop_down, #search_icon{
+    background-image: url(icons/icon-arrow.svg);
+    height: 40px;
+    margin-left: auto;
+    margin-right: 10px;
+    background-position: right;
+    width: 13px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#search_icon{
+    width: 17px;
+    background-image: url(icons/search.png);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+input:focus{
+    outline: none;
+}
+#no_result{
+    position: absolute;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 50px;
+}
+#contain{
+    width: 170px;
+    margin: 0px auto;
+    text-align: center;
+    border: 2px;
+    padding: 20px;
+    box-shadow: 1px 0px 5px 1px #eae4e4;
+}
